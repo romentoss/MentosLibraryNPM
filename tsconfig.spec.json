@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "outDir": "./out-tsc/spec",
+    "types": ["jest", "node"]
+  },
+  "include": [
+    "projects/button-fan-mentos/**/*.spec.ts",
+    "projects/button-fan-mentos/**/*.d.ts",
+    "src/setup-jest.ts"
+  ]
+}

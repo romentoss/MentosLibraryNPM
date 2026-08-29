@@ -1,0 +1,29 @@
+{
+  "name": "button-fan-mentos",
+  "version": "0.1.0",
+  "description": "Angular standalone button that opens like a fan on hover, leaving a shadow with an icon that follows the cursor.",
+  "author": "romentoss",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angular-component",
+    "standalone",
+    "button",
+    "hover",
+    "fan",
+    "ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/romentoss/MentosLibraryNPM.git"
+  },
+  "bugs": {
+    "url": "https://github.com/romentoss/MentosLibraryNPM/issues"
+  },
+  "homepage": "https://github.com/romentoss/MentosLibraryNPM#readme",
+  "peerDependencies": {
+    "@angular/common": "^17.3.0",
+    "@angular/core": "^17.3.0"
+  },
+  "sideEffects": false
+}

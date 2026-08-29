@@ -1,0 +1,82 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "button-fan-mentos": {
+      "projectType": "library",
+      "root": "projects/button-fan-mentos",
+      "sourceRoot": "projects/button-fan-mentos/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/button-fan-mentos/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/button-fan-mentos/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/button-fan-mentos/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "button-fan-demo": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/button-fan-demo",
+      "sourceRoot": "projects/button-fan-demo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/button-fan-demo",
+            "index": "projects/button-fan-demo/src/index.html",
+            "browser": "projects/button-fan-demo/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/button-fan-demo/tsconfig.app.json",
+            "assets": [],
+            "styles": ["projects/button-fan-demo/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "button-fan-demo:build:production"
+            },
+            "development": {
+              "buildTarget": "button-fan-demo:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        }
+      }
+    }
+  }
+}

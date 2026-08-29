@@ -1,0 +1,40 @@
+{
+  "name": "button-fan-angular",
+  "version": "0.1.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve button-fan-demo",
+    "build": "npm run build:lib && npm run build:demo",
+    "build:demo": "ng build button-fan-demo",
+    "build:lib": "ng build button-fan-mentos",
+    "build:lib:watch": "ng build button-fan-mentos --watch --configuration development",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^17.3.0",
+    "@angular/common": "^17.3.0",
+    "@angular/compiler": "^17.3.0",
+    "@angular/core": "^17.3.0",
+    "@angular/forms": "^17.3.0",
+    "@angular/platform-browser": "^17.3.0",
+    "@angular/platform-browser-dynamic": "^17.3.0",
+    "@angular/router": "^17.3.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.6.0",
+    "zone.js": "~0.14.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.3.0",
+    "@angular/cli": "^17.3.0",
+    "@angular/compiler-cli": "^17.3.0",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-preset-angular": "^14.6.2",
+    "ng-packagr": "^17.3.0",
+    "ts-jest": "^29.4.12",
+    "typescript": "~5.4.0"
+  }
+}
